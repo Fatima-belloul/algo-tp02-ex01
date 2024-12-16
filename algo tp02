@@ -10,14 +10,12 @@ int main() {
     char *chaine = (char *)malloc(N + 1);
     printf("Entrez une chaine de %d caracteres: ", N);
     scanf("%s", chaine);
+    char T[N + 1];
 
-    int longueur = strlen(chaine);
-    char T[longueur + 1];
-
-    for (int i = 0; i < longueur; i++) {
-        T[i] = chaine[longueur - i - 1];
+    for (int i = 0; i < N; i++) {
+        T[i] = chaine[N - i - 1];
     }
-    T[longueur] = '\0';
+    T[N] = '\0';
 
     printf("La chaine inversee est: %s\n", T);
 
